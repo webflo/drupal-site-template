@@ -10,10 +10,23 @@
         }
     ],
     "support": {},
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://raw.githubusercontent.com/webflo/d8/master/packages.json"
+        },
+        {
+            "type": "composer",
+            "url": "http://packagist.drupal-composer.org"
+        }
+    ],
     "require": {
         "composer/installers": "^1.0.20",
         "drupal/core": "8.0.*",
-        "drush/drush": "7.0.*"
+        "drush/drush": "7.0.*",
+
+        "drupal/devel": "8.1.*@dev",
+        "drupal/token": "8.1.*@dev"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
