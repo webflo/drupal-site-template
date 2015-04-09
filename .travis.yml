@@ -5,9 +5,11 @@ php:
   - 5.6
 
 before_install:
-  - composer self-update
+  - composer --verbose self-update
+  - composer --version
 
 install:
-  - composer install
+  - composer --verbose install
 
-script: "cd web && ./../vendor/bin/drush site-install --yes --db-url=sqlite://site.sqlite"
+script:
+  - "cd web && ./../vendor/bin/drush site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite"
